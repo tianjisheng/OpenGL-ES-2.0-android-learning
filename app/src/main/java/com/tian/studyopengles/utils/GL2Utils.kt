@@ -1,7 +1,6 @@
 package com.tian.studyopengles.utils
 
 import android.opengl.GLES20
-import android.util.Log
 
 object GL2Utils {
     fun loadShader(shaderType: Int, shaderSource: String): Int {
@@ -60,7 +59,19 @@ object GL2Utils {
         }
     }
 
-    fun log(log: String) {
-        Log.i("GLDemo", log)
+    fun validateProgram(program: Int): Int {
+        val statusArray = IntArray(1)
+        GLES20.glValidateProgram(program)
+        GLES20.glGetProgramiv(program, GLES20.GL_VALIDATE_STATUS, statusArray, 0)
+        if (statusArray[0] == 0) {
+            val info = GLES20.glGetProgramInfoLog(program)
+            log("validateProgram == $info")
+        }
+        return statusArray[0]
+    }
+
+    private fun log(log: String) {
+        LogUtils.i(log)
+
     }
 }

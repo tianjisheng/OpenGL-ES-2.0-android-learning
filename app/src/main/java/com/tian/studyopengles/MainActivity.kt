@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
+import com.tian.studyopengles.lines.LineActivity
+import com.tian.studyopengles.points.MultiplePoints
 import com.tian.studyopengles.points.OnePoints
 import org.jetbrains.anko.button
 import org.jetbrains.anko.verticalLayout
@@ -19,10 +21,16 @@ class MainActivity : Activity() {
                     startDemoActivity(OnePoints::class.java)
                 }
             }
+            button("多个点") {
+                id = multiple_point_id
+                setOnClickListener {
+                    startDemoActivity(MultiplePoints::class.java)
+                }
+            }
             button("线") {
                 id = line_id
                 setOnClickListener {
-                    startDemoActivity(OnePoints::class.java)
+                    startDemoActivity(LineActivity::class.java)
                 }
             }
         }
@@ -30,6 +38,7 @@ class MainActivity : Activity() {
 
     companion object {
         val point_id = 1
+        val multiple_point_id =2
         val line_id = 10
         val line_loop_id = 11
     }

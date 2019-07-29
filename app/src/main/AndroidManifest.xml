@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".points.OnePoints"/>
+        <activity android:name=".points.MultiplePoints"/>
+        <activity android:name=".lines.LineActivity"/>
     </application>
 
 </manifest>
