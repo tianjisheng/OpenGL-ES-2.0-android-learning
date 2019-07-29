@@ -21,6 +21,8 @@
         <activity android:name=".points.MultiplePoints"/>
         <activity android:name=".lines.LineActivity"/>
         <activity android:name=".triangle.TriangleActivity"/>
+        <activity android:name=".triangle.FragCoordActivity"/>
+        <activity android:name=".triangle.MatrixActivity"/>
     </application>
 
 </manifest>

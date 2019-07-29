@@ -7,6 +7,9 @@ import android.os.Bundle
 import com.tian.studyopengles.lines.LineActivity
 import com.tian.studyopengles.points.MultiplePoints
 import com.tian.studyopengles.points.OnePoints
+import com.tian.studyopengles.triangle.FragCoordActivity
+import com.tian.studyopengles.triangle.FragCoordRender
+import com.tian.studyopengles.triangle.MatrixActivity
 import com.tian.studyopengles.triangle.TriangleActivity
 import org.jetbrains.anko.button
 import org.jetbrains.anko.verticalLayout
@@ -41,6 +44,20 @@ class MainActivity : Activity() {
                     startDemoActivity(TriangleActivity::class.java)
                 }
             }
+
+            button("三角形_fragCoord") {
+                id = triangle_frag_coord_id
+                setOnClickListener {
+                    startDemoActivity(FragCoordActivity::class.java)
+                }
+            }
+
+            button("三角形_matrix") {
+                id = triangle_frag_coord_id
+                setOnClickListener {
+                    startDemoActivity(MatrixActivity::class.java)
+                }
+            }
         }
     }
 
@@ -49,6 +66,7 @@ class MainActivity : Activity() {
         val multiple_point_id =2
         val line_id = 10
         val triangle_id = 20
+        val triangle_frag_coord_id = 21
     }
 
     private fun startDemoActivity(cls: Class<*>) {
