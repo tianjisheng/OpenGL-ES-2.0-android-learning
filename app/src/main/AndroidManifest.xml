@@ -20,6 +20,7 @@
         <activity android:name=".points.OnePoints"/>
         <activity android:name=".points.MultiplePoints"/>
         <activity android:name=".lines.LineActivity"/>
+        <activity android:name=".triangle.TriangleActivity"/>
     </application>
 
 </manifest>
