@@ -23,6 +23,7 @@
         <activity android:name=".triangle.TriangleActivity"/>
         <activity android:name=".triangle.FragCoordActivity"/>
         <activity android:name=".triangle.MatrixActivity"/>
+        <activity android:name=".texture.TextureActivity"/>
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.tian.studyopengles.lines.LineActivity
 import com.tian.studyopengles.points.MultiplePoints
 import com.tian.studyopengles.points.OnePoints
+import com.tian.studyopengles.texture.TextureActivity
 import com.tian.studyopengles.triangle.FragCoordActivity
 import com.tian.studyopengles.triangle.FragCoordRender
 import com.tian.studyopengles.triangle.MatrixActivity
@@ -58,6 +59,13 @@ class MainActivity : Activity() {
                     startDemoActivity(MatrixActivity::class.java)
                 }
             }
+
+            button("图片绘制") {
+                id = texture_id
+                setOnClickListener {
+                    startDemoActivity(TextureActivity::class.java)
+                }
+            }
         }
     }
 
@@ -67,6 +75,7 @@ class MainActivity : Activity() {
         val line_id = 10
         val triangle_id = 20
         val triangle_frag_coord_id = 21
+        val texture_id = 30
     }
 
     private fun startDemoActivity(cls: Class<*>) {
